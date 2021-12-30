@@ -7,5 +7,10 @@
     "test": "jest"
   },
   "author": "Samuel Abatan",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "faker": "^5.5.3",
+    "jest": "^27.4.5"
+  }
 }
