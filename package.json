@@ -4,8 +4,9 @@
     "description": "A simple nodejs APP",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon server.js",
+        "start": "node server.js",
         "test": "jest",
+        "dev": "nodemon server.js",
         "cypress:open": "cypress open"
     },
     "author": "Samuel Abatan",
