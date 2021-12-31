@@ -4,15 +4,20 @@
     "description": "A simple nodejs APP",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon index.js",
-        "test": "jest"
+        "start": "nodemon server.js",
+        "test": "jest",
+        "cypress:open": "cypress open"
     },
     "author": "Samuel Abatan",
     "license": "MIT",
     "dependencies": {
+        "cypress": "^9.2.0",
+        "dotenv": "^10.0.0",
         "express": "^4.17.2",
         "faker": "^5.5.3",
-        "jest": "^27.4.5"
+        "jest": "^27.4.5",
+        "superagent": "^6.1.0",
+        "supertest": "^6.1.6"
     },
     "devDependencies": {
         "nodemon": "^2.0.15"
