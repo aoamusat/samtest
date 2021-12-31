@@ -22,7 +22,7 @@ pipelines:
                   - application.tar.gz
         - step:
               name: Deploy to Heroku dyno
-              deployment: testing
+              deployment: test
               caches:
                   - node
               script:
