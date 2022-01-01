@@ -22,12 +22,24 @@ pipelines:
                   - npm test
               caches:
                   - node
-        - step:
-              name: Run Integration Tests
-              script:
-                  - npm install
-                  - npm start
-                  - npm run e2e
+        - parallel:
+              - step:
+                    name: Install cypress dependencies
+                    caches:
+                        - node
+                    script:
+                        - npm install
+                        - npm start
+              - step:
+                    name: Run E2E Tests
+                    script:
+                        - npm run e2e
+        # - step:
+        #       name: Run Integration Tests
+        #       script:
+        #           - npm install
+        #           - npm start
+        #           - npm run e2e
         - step:
               name: Create application artifacts
               script:
