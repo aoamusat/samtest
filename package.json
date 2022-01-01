@@ -7,7 +7,7 @@
         "start": "node server.js",
         "test": "jest",
         "dev": "nodemon server.js",
-        "cypress:open": "cypress open"
+        "e2e": "cypress open"
     },
     "author": "Samuel Abatan",
     "license": "MIT",

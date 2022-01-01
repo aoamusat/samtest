@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const faker = require('faker');
+const path = require('path');
 require('dotenv').config();
+
+// configure middlewares
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Define routes
 app.get('/', function (req, res) {
