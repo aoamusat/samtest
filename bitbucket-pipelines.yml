@@ -9,11 +9,25 @@ pipelines:
               script:
                   - npm install
         - step:
+              name: Configure application environment variables
+              script:
+                  - echo "Setting up environment variables"
+                  - touch .env
+                  - echo PORT=$PORT >> .env
+                  - echo BASE_URL=$BASE_URL >> .env
+                  - echo NODE_ENV=testing >> .env
+        - step:
               name: Run Unit Tests
               script:
                   - npm test
               caches:
                   - node
+        - step:
+              name: Run Integration Tests
+              script:
+                  - npm install
+                  - npm start
+                  - npm run e2e
         - step:
               name: Create application artifacts
               script:
